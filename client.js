@@ -14,14 +14,6 @@ const connect = function () {
   const name = "@@@";
   conn.write(`Name: ${name}`);
 
-  
-  // setInterval(() => {
-  //   conn.write(`Move: up`);
-  // }, 1000);
-  
-
-  
-
   // interpret incoming data as text
   conn.setEncoding("utf8");
 

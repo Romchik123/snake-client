@@ -15,10 +15,7 @@ const setupInput = (conn) => {
   return stdin;
 };
 
-
-
-
-const handleUserInput = function(key) {
+const handleUserInput = function (key) {
   // \u0003 maps to ctrl+c input
   if (key === "\u0003") {
     process.exit();
@@ -30,9 +27,9 @@ const handleUserInput = function(key) {
     connection.write("Move: down");
   } else if (key === "d") {
     connection.write("Move: right");
+  } else if (key === "m") {
+    connection.write("Say: You All Awesome!!! =)))");
   }
 };
-
-
 
 module.exports = { setupInput };
