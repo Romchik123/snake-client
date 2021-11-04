@@ -7,28 +7,17 @@ const connect = function () {
     port: 50541, // PORT number here,
   });
 
-  const name = "AAA";
-
-  conn.on("connect", () => {
-    console.log("Connected!");
+  conn.on("connect", function() {
+    console.log("Successfully connected to game server");
   });
-  
+
+  const name = "@@@";
   conn.write(`Name: ${name}`);
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
-  
 
   return conn;
 };
 
-
-
-
-
-
-
-
-
-
-module.exports = {connect};
+module.exports = { connect };
